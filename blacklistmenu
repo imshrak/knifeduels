@@ -1,1 +1,21 @@
-print('You've been blacklisted')
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Access Denied",
+   LoadingTitle = "Blacklisted",
+   LoadingSubtitle = "by shrak",
+   ConfigurationSaving = { Enabled = false },
+   KeySystem = false
+})
+
+local Tab = Window:CreateTab("Notice")
+Tab:CreateParagraph({
+   Title = "You are blacklisted",
+   Content = "You have been blacklisted from using this script. Join the discord server to appeal the ban: https://discord.gg/N7Fa87GtKe"
+})
+Tab:CreateButton({
+   Name = "Copy Discord Link",
+   Callback = function()
+      setclipboard("https://discord.gg/N7Fa87GtKe")
+   end
+})
