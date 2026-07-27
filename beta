@@ -1,11 +1,4 @@
 getgenv().KnifeDuelsLoaderLoaded = false
-local queueFunc = queue_on_teleport or queueonteleport
-if queueFunc then
-    queueFunc([[
-        task.wait(5)
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/imshrak/knifeduels/refs/heads/main/beta"))()
-    ]])
-end
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/gen2"))()
 
 local isUnsupported = false
