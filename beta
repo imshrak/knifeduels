@@ -1,4 +1,4 @@
-getgenv().KnifeDuelsLoaderLoaded = false 
+getgenv().KnifeDuelsLoaderLoaded = false
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/gen2"))()
 
 local isUnsupported = false
