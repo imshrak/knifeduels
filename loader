@@ -1,10 +1,10 @@
 local scriptUrl = 'https://gate.sirius.menu/gateway?id=sid_mzso9v2drojs'
-local loaderUrl = 'https://raw.githubusercontent.com/imshrak/knifeduels/refs/heads/main/loader'
+local loaderUrl = 'https://raw.githubusercontent.com/imshrak/knifeduels/refs/heads/main/menu'
 
 local function loadAndQueue()
     loadstring(game:HttpGet(scriptUrl))()
     queue_on_teleport([====[
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/imshrak/knifeduels/refs/heads/main/loader'))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/imshrak/knifeduels/refs/heads/main/menu'))()
     ]====])
 end
 
