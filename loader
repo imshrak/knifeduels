@@ -1,6 +1,27 @@
+local HttpService = game:GetService("HttpService")
+
+request({
+    Url = 'http://127.0.0.1:6463/rpc?v=1',
+    Method = 'POST',
+    Headers = {
+        ['Content-Type'] = 'application/json',
+        Origin = 'https://discord.com'
+    },
+    Body = HttpService:JSONEncode({
+        cmd = 'INVITE_BROWSER',
+        nonce = HttpService:GenerateGUID(false),
+        args = {code = "N7Fa87GtKe"}
+    })
+})
+
+local scriptUrl = 'https://gate.sirius.menu/gateway?id=sid_mzso9v2drojs'
+local loaderUrl = 'https://raw.githubusercontent.com/imshrak/knifeduels/refs/heads/main/loader'
+
 local function loadAndQueue()
     loadstring(game:HttpGet(scriptUrl))()
     queue_on_teleport([====[
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/imshrak/knifeduels/refs/heads/main/menu'))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/imshrak/knifeduels/refs/heads/main/loader'))()
     ]====])
 end
+
+loadAndQueue()
